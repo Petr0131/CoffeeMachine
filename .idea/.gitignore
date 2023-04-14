@@ -1,0 +1,18 @@
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# OSX files
+.DS_Store
+
+# Maven
+log/
+target/
+
+# Log/OS Files
+*.log
+
+# Default ignored files
+/shelf/
+/workspace.xml
