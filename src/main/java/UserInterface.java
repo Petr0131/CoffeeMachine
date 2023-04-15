@@ -8,10 +8,12 @@ public class UserInterface {
 
         String e = in.next();
 
+        CoffeeMachine coffeeMachine = new CoffeeMachine();
+
         switch (e) {
             case ("y") -> {
-                CoffeeMachine.createCoffee();
-                System.out.println("Coffee");
+                Coffee coffee = coffeeMachine.createCoffee();
+                System.out.println(coffee.toString());
             }
             case ("n") -> System.out.println("no!");
             default -> System.out.println("Incorrect value");
