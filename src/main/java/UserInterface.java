@@ -4,19 +4,35 @@ public class UserInterface {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        System.out.println("You want coffee?(y/n)");
+        // Считывание объемов компонентов с условных датчиков кофемашины.
+        CoffeeMachine coffeeMachine = new CoffeeMachine(500, 500, 200);
 
-        String e = in.next();
+        String ch;
 
-        CoffeeMachine coffeeMachine = new CoffeeMachine();
+        do {
+            System.out.println("You want coffee?(y/n)");
 
-        switch (e) {
-            case ("y") -> {
-                Coffee coffee = coffeeMachine.createCoffee();
-                System.out.println(coffee.toString());
+            ch = in.next();
+
+            switch (ch) {
+                case ("y") -> {
+                    try{
+
+                        Coffee coffee = coffeeMachine.createCoffee(); // Запрос на приготовление кофе
+                        System.out.println(coffee.toString());
+
+                    } catch (Exception e){
+
+                        System.out.println(e.getMessage());
+
+                    }
+                }
+
+                case ("n") -> System.out.println("Got it! Come back later!");
+
+                default -> System.out.println("Incorrect value");
             }
-            case ("n") -> System.out.println("no!");
-            default -> System.out.println("Incorrect value");
         }
+        while (ch.equals("y"));
     }
 }
