@@ -13,7 +13,9 @@ public class Container {
      */
     void checkEnough (int size){
         if(currentSize < size){
+
             throw new IllegalArgumentException("Not enough component!");
+
         }
     }
 }

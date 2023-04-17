@@ -1,8 +1,8 @@
 public class Coffee {
 
-    private int milk;
-    private int water;
-    private int beans;
+    private final int milk;
+    private final int water;
+    private final int beans;
 
     Coffee(CoffeeMachine machine, int milk, int water, int beans){
 

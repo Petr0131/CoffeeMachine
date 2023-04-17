@@ -17,9 +17,6 @@ public class CoffeeMachine {
             milk = new Container(maxCapacityMilkContainer, currentVolumeMilk);
             water = new Container(maxCapacityWaterContainer, currentVolumeWater);
             beans = new Container(maxCapacityBeansContainer, currentWeightBeans);
-
-            //HashMap<String, Container> dict = new HashMap<>();
-            //dict.put("one", new Container(0,0));
         }
 
     /**
@@ -27,10 +24,12 @@ public class CoffeeMachine {
      * @return - возвращает экземпляр кофе.
      */
     public Coffee createCoffee(){
+
             Coffee coffee;
+            
             try {
 
-                coffee = new Coffee(this, 50, 50, 20);
+                coffee = new Coffee(this, 50, 50, 20); // Рецепт кофе.
 
             } catch (Exception e){
 

@@ -18,7 +18,7 @@ public class UserInterface {
                 case ("y") -> {
                     try{
 
-                        Coffee coffee = coffeeMachine.createCoffee(); // Запрос на приготовление кофе
+                        Coffee coffee = coffeeMachine.createCoffee(); // Запрос на приготовление кофе.
                         System.out.println(coffee.toString());
 
                     } catch (Exception e){
